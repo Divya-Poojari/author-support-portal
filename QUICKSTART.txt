@@ -1,0 +1,29 @@
+BOOKLEAF PORTAL — QUICK START
+
+Prerequisites: Node.js 20+ and npm.
+
+1. Extract the ZIP and open a terminal in the bookleaf-portal folder.
+2. Install dependencies:
+   npm install
+   npm run install:all
+3. Create the API environment file:
+   Windows PowerShell: Copy-Item server/.env.example server/.env
+   macOS/Linux:        cp server/.env.example server/.env
+4. (Recommended) Change JWT_SECRET in server/.env. Set OPENAI_API_KEY if you want live OpenAI drafts; the app works without it.
+5. Start both apps:
+   npm run dev
+6. Open http://localhost:5173
+
+API health check: http://localhost:4000/api/health
+
+DEMO ACCOUNTS
+Admin:  admin@bookleaf.test / Admin123!
+Author: priya.sharma@email.com / Author123!
+All other seeded authors use their dataset email and password Author123!.
+
+Build frontend for production: npm run build
+Run only API: npm run start
+Run only frontend dev server: npm run dev --prefix client
+Run only API dev server: npm run dev --prefix server
+
+The assignment's attachment picker is UI-only. Do not publish this confidential assignment or the solution publicly.
